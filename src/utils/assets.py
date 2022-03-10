@@ -24,7 +24,10 @@ def loadImages():
         target_name = string.removeSuffix(file, '.png')
         temp_image = cv2.imread(path)
         if env.scale_image['enable']:
-            targets[target_name] = resizeImageForScale(temp_image, env.scale_image['percent'])
+            if target_name == "select-wallet-2" :
+                   targets[target_name] = temp_image
+            else:
+                  targets[target_name] = resizeImageForScale(temp_image, env.scale_image['percent'])
         else:
             targets[target_name] = temp_image
 

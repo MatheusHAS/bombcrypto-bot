@@ -28,7 +28,7 @@ def clickWorkAllButton():
 
 def clickGreenBarButtons():
     debug_mode_enabled = env.debug['clickGreenBarButtons']
-    offset = 130    
+    offset = 95    
 
     green_bars = getPositions(env.images['green-bar'], threshold=env.threshold['green_bar']*env.scale_image['threshold'] if env.scale_image['enable'] else env.threshold['green_bar'])
     Log.logger('🟩 %d green bars detected' % len(green_bars))
